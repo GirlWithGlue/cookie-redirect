@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting to Girl Scout Cookies…</title>
+    <script>
+      const links = [
+        "https://DigitalCookie.GirlScouts.org/scout/victoria112349",
+        "https://DigitalCookie.GirlScouts.org/scout/cynthia309436",
+        "https://DigitalCookie.GirlScouts.org/scout/cecelia664800"
+      ];
+
+      // Pick a random link and redirect
+      const url = links[Math.floor(Math.random() * links.length)];
+      window.location.replace(url);
+    </script>
+  </head>
+  <body>
+    Redirecting to cookies… If you’re not redirected,
+    <a id="manual" href="#">click here</a>.
+    <script>
+      // Fallback link in case redirect is blocked
+      document.getElementById("manual").href = url;
+    </script>
+  </body>
+</html>
